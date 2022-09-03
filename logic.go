@@ -3,7 +3,10 @@ package main
 func converToRomanNumeral(num int) string {
 	var res string
 	for num > 0 {
-		if num >= 1000 {
+		if num >= 5000 {
+			res += "V"
+			num -= 5000
+		} else if num >= 1000 {
 			res += "M"
 			num -= 1000
 		} else if num >= 900 {
@@ -30,23 +33,18 @@ func converToRomanNumeral(num int) string {
 		} else if num >= 10 {
 			res += "X"
 			num -= 10
-			continue
 		} else if num%9 == 0 {
 			res += "IX"
 			num -= 9
-			continue
 		} else if num%5 == 0 {
 			res += "V"
 			num -= 5
-			continue
 		} else if num%4 == 0 {
 			res += "IV"
 			num -= 4
-			continue
 		} else {
 			res = res + "I"
 			num -= 1
-			continue
 		}
 	}
 	return res
