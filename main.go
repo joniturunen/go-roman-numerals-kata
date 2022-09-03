@@ -4,7 +4,7 @@ import "os"
 
 func main() {
 	rdr := os.Stdin
-	inputStr := getUserInput(rdr)
-	romanNumStr := converToRomanNumeral(inputStr)
+	userInput := getUserInput(rdr)
+	romanNumStr := converToRomanNumeral(userInput)
 	println(romanNumStr)
 }
