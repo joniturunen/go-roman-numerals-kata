@@ -4,7 +4,7 @@ func converToRomanNumeral(num int) string {
 	var res string
 	for num > 0 {
 		if num >= 5000 {
-			res += "V"
+			res += "V̅"
 			num -= 5000
 		} else if num >= 1000 {
 			res += "M"
