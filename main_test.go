@@ -44,4 +44,20 @@ func TestArabicNumeralsToRomanNumerals(t *testing.T) {
 			t.Errorf("got %q want %q", got, expected)
 		}
 	})
+	t.Run("Convert 13 to XII", func(t *testing.T) {
+		got := converToRomanNumeral(13)
+		expected := "XIII"
+
+		if got != expected {
+			t.Errorf("got %q want %q", got, expected)
+		}
+	})
+	t.Run("Convert 3345 to MMMCCCXLV", func(t *testing.T) {
+		got := converToRomanNumeral(3345)
+		expected := "MMMCCCXLV"
+
+		if got != expected {
+			t.Errorf("got %q want %q", got, expected)
+		}
+	})
 }
