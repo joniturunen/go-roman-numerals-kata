@@ -28,9 +28,17 @@ func TestArabicNumeralsToRomanNumerals(t *testing.T) {
 			t.Errorf("got %q want %q", got, expected)
 		}
 	})
-	t.Run("Convert 2 to II", func(t *testing.T) {
-		got := converToRomanNumeral(2)
-		expected := "II"
+	t.Run("Convert 5 to V", func(t *testing.T) {
+		got := converToRomanNumeral(5)
+		expected := "V"
+
+		if got != expected {
+			t.Errorf("got %q want %q", got, expected)
+		}
+	})
+	t.Run("Convert 9 to IX", func(t *testing.T) {
+		got := converToRomanNumeral(9)
+		expected := "IX"
 
 		if got != expected {
 			t.Errorf("got %q want %q", got, expected)
