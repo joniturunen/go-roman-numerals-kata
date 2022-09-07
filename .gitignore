@@ -16,3 +16,7 @@
 
 # CoPilot cache
 *.dccache
+
+# Target build path
+build/*
+
