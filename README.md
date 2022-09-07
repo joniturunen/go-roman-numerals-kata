@@ -11,7 +11,7 @@ Write a function to convert from normal numbers to Roman Numerals: e.g.
 7 --> VII
 ```
 
-For a full description of how it works, take a look at the [Wikipedia article](https://en.wikipedia.org/wiki/Roman_numerals).
+For a full description of how roman numerals work, take a look at the [Wikipedia article](https://en.wikipedia.org/wiki/Roman_numerals).
 
 ---
 
@@ -27,20 +27,18 @@ go run .
 
 ### Running the tests
 
-Coverage 65,4% as of 2022-09-03
 
 ```bash
 # In the repo directory
-go test .
+go test -v .
 ```
 ---
 ## Functionality supported
 
-Supports roman numbers to V̅ (5000).
-
-Uses for loop to check how big the number is and constructs the result by adding the corresponding roman number to the result.
+Supports roman numbers to X̅ (10000). Runs for bigger numbers also but does not use the large numeral symbols after X̅.
 
 ---
 ## Changelog
 
+- 2022-09-07: Refactor the logic to use a map instead of if-else statements. Add support for numbers up to 10000.
 - 2022-09-03: First kata workout done
